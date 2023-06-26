@@ -9,7 +9,7 @@ WIN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Test game")
 
 HFONT = pygame.font.Font('Assets/font2.ttf', 40)
-WFONT = pygame.font.Font('Assets/font2.ttf', 100)
+WFONT = pygame.font.Font('Assets/font3.ttf', 80)
 
 SHIT = pygame.mixer.Sound('Assets/kiblast.mp3')
 SFIRE = pygame.mixer.Sound('Assets/sfire.mp3')
@@ -113,12 +113,12 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LCTRL and len(c1Bul) < 5:
+                if event.key == pygame.K_LCTRL and len(c1Bul) < 3:
                     bullet = pygame.Rect(c1.x + c1.width, c1.y + c1.height // 2 - 2, 10, 5)
                     c1Bul.append(bullet)
                     SFIRE.play()
 
-                if event.key == pygame.K_RCTRL and len(c2Bul) < 5:
+                if event.key == pygame.K_RCTRL and len(c2Bul) < 3:
                     bullet = pygame.Rect(c2.x, c2.y + c2.height // 2 - 2, 10, 5)
                     c2Bul.append(bullet)
                     SFIRE.play()
